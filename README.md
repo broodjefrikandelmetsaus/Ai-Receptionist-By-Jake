@@ -8,7 +8,17 @@ https://ai-receptionist-by-jake.jakedereus.workers.dev
 
 Cloudflare deployment version: `5fa8fe9d-b873-4b00-8f6b-ba8c2449ff5f` (100% traffic assigned by Cloudflare deployment record).
 
-## Current release: 0.1.0
+## Current release: 0.2.0
+
+- Email/password registration and login
+- Hashed passwords (PBKDF2-SHA-256, per-user salt)
+- Hashed opaque session tokens in D1, HttpOnly/Secure/SameSite cookie, 7-day expiry
+- Basic IP-based signup/login attempt throttling
+- Tenant-scoped business and receptionist settings
+- Tenant-scoped service creation/listing
+- Dutch/English dashboard
+
+## Previous release: 0.1.0
 - Public demo dashboard
 - Stateless AI chat using `@cf/zai-org/glm-4.7-flash`
 - Browser speech recognition and speech synthesis (browser-dependent)
