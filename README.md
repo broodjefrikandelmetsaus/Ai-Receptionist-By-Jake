@@ -2,6 +2,12 @@
 
 Multilingual AI receptionist prototype (Dutch/English) on Cloudflare Workers + Workers AI + D1.
 
+## Live demo
+
+https://ai-receptionist-by-jake.jakedereus.workers.dev
+
+Cloudflare deployment version: `5fa8fe9d-b873-4b00-8f6b-ba8c2449ff5f` (100% traffic assigned by Cloudflare deployment record).
+
 ## Current release: 0.1.0
 - Public demo dashboard
 - Stateless AI chat using `@cf/zai-org/glm-4.7-flash`
