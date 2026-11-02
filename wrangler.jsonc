@@ -1,0 +1,15 @@
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "ai-receptionist-by-jake",
+  "main": "src/index.js",
+  "compatibility_date": "2026-11-02",
+  "workers_dev": true,
+  "ai": { "binding": "AI" },
+  "d1_databases": [{
+    "binding": "DB",
+    "database_name": "ai-receptionist-by-jake-db",
+    "database_id": "ce4b0b48-a5f6-4245-8a50-ae9831c7b077",
+    "migrations_dir": "migrations"
+  }],
+  "observability": { "enabled": true, "head_sampling_rate": 0.1 }
+}
