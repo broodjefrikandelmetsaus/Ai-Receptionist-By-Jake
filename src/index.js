@@ -61,7 +61,7 @@ export default {async fetch(req,env){
    env.DB.prepare("INSERT INTO businesses (id,name,slug,default_language) VALUES (?,?,?,?)").bind(bid,businessName,slug,language),
    env.DB.prepare("INSERT INTO memberships (id,user_id,business_id,role) VALUES (?,?,?,'owner')").bind(mid,uid,bid),
    env.DB.prepare("INSERT INTO agents (id,business_id,display_name) VALUES (?,?,?)").bind(aid,bid,"Jake AI")
-  ]);const token=await createSession(uid,env);return json({ok:true},{status:201, "set-cookie":cookie(token)});}catch(e){return json({error:"An account with this email may already exist, or registration failed."},409);}
+  ]);const token=await createSession(uid,env);return json({ok:true},201,{"set-cookie":cookie(token)});}catch(e){return json({error:"An account with this email may already exist, or registration failed."},409);}
  }
  if(req.method==="POST"&&url.pathname==="/api/auth/login"){
   if(!await rateAllowed(req,env))return json({error:"Too many attempts. Try again in 15 minutes."},429);
